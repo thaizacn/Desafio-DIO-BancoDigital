@@ -10,6 +10,8 @@ public interface Conta {
 		
 	void transferir(double valor, ContaImpl contaDestino);
 	
+	void pagamento(double valor, String codigoDeBarras);
+	
 	void imprimirExtrato();
 
 } 

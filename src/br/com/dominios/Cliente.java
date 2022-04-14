@@ -8,7 +8,8 @@ import lombok.Setter;
 public class Cliente {
 	
 	private String nome;
+	private Integer idade;
 	private Integer documento;
-	
+	private String chavePix;
 
 }

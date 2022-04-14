@@ -10,6 +10,7 @@ import lombok.Setter;
 public abstract class ContaImpl implements Conta{
 
 	protected static int SEQUENCIAL = 1;
+	private String chavePix;
 	protected static final int AGENCIA_PADRAO = 3397;
 	protected int agencia;
 	protected int conta;
@@ -37,6 +38,14 @@ public abstract class ContaImpl implements Conta{
 	public void transferir(double valor, ContaImpl contaDestino) {
 		this.sacar(valor);
 		contaDestino.depositar(valor);
+	}
+	
+	@Override
+	public void pagamento(double valor, String codigoDeBarras) {
+//      PAGAMENTO DE CONTAS A PARTIR DO CÓDIGO DE BARRAS
+		this.sacar(valor);
+		System.out.println(" **** PAGAMENTO REALIZADO COM SUCESSO ****");
+		System.out.println("Imprima um novo extrato para saber mais");
 	}
 	
 	protected void dadosImpressao() {

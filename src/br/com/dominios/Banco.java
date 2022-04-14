@@ -11,7 +11,12 @@ import lombok.Setter;
 public class Banco {
 	
 	private String nome;
-	private List<ContaImpl> contas;
+	
+	private static List<ContaImpl> contas;
 
+	public static void main(String args[]) {
+		List<ContaImpl> Array = contas;
+        System.out.println(Array);
+	}
 
 }
