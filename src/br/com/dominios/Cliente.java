@@ -5,9 +5,10 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Clientes {
+public class Cliente {
 	
 	private String nome;
 	private Integer documento;
+	
 
 }
