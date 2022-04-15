@@ -13,18 +13,20 @@ public class PrimeiroCliente {
 		thaiza.setNome("Thaiza");
 		thaiza.setDocumento(123456789);
 		
-		ContaImpl 
-		cc = new ContaCorrente(thaiza);
-		ContaImpl cp = new ContaPoupanca(thaiza);
+		ContaImpl PrimeiraContaCorrente = new ContaCorrente(thaiza);
+		ContaImpl PrimeiraContaPoupanca = new ContaPoupanca(thaiza);
 		
 //      UTILIZANDO A CONTA
-		cc.depositar(100);
-		cp.depositar(300.00);
-		cp.transferir(150.00, cc);
-		cc.pagamento(200, "10293920389302");
+
+		PrimeiraContaCorrente.depositar(100);
 		
-		cc.imprimirExtrato();
-		cp.imprimirExtrato();
+		PrimeiraContaCorrente.imprimirExtrato();
+		
+		PrimeiraContaPoupanca.depositar(200);
+		PrimeiraContaPoupanca.transferir(150, PrimeiraContaCorrente);
+		
+		PrimeiraContaPoupanca.imprimirExtrato();
+
 	}
 
 }
